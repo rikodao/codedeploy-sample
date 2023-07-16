@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       # Actionsが登録されているDockerHubのRateリミット回避
-      - echo ${DOCKER_PASS} | docker login --username <docker-username> --password-stdin
+      - echo ${DOCKER_PASS} | docker login --username rikoda7010 --password-stdin
   build:
     # GitHub Actions
     steps:
