@@ -20,4 +20,4 @@ phases:
           node-version: 20
       - run: npm -v
       - run: ls
-      - run: echo "github action failed!!"
+      - run: echo "github action failedq!!"
