@@ -22,7 +22,7 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - echo Build completed on `date`
+      - echo Build completed 1on `date`
     # GitHub Actions
     # steps:
     #   - uses: actions/checkout@v3
