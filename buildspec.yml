@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  variables:
+    STAGE: "prod"
+  parameter-store:
+    DOCKER_PASS: /dockerhub/password
+
+phases:
+  pre_build:
+    commands:
+      # Actionsが登録されているDockerHubのRateリミット回避
+      - echo ${DOCKER_PASS} | docker login --username <docker-username> --password-stdin
+  build:
+    # GitHub Actions
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm -v
+      - run: ls
+      - run: echo "github action failed!!"
