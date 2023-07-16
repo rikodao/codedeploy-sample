@@ -4,7 +4,7 @@ env:
   variables:
     STAGE: "prod"
   parameter-store:
-    DOCKER_PASS: /CodeBuild/dockerhub-password1
+    DOCKER_PASS: dockerhub-password
 
 phases:
   pre_build:
